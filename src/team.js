@@ -8,7 +8,7 @@ class Team {
   }
 
   *[Symbol.iterator]() {
-    for (const character of this.characters) {
+    for (let i = 0; i < this.characters.length; i++) {
       yield character;
     }
   }

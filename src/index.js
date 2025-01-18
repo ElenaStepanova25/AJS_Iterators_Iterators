@@ -1,4 +1,4 @@
-import Team from './Team';
+import Team from './team';
 
 const team = new Team();
 
