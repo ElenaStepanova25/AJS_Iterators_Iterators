@@ -8,9 +8,17 @@ class Team {
   }
 
   *[Symbol.iterator]() {
-    for (let i = 0; i < this.characters.length; i++) {
-      yield character;
-    }
+    let index = 0;
+    const characters = this.characters;
+    return {
+      next() {
+        if (index < characters.length) {
+          return { value: characters[index++], done: false };
+        } else {
+          return { done: true };
+        }
+      },
+    };
   }
 }
 
